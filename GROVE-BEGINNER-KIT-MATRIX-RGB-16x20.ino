@@ -204,7 +204,7 @@ void LED(int X, int Y, int R, int G, int B)
 
   for (byte BAM = 0; BAM < BAM_RESOLUTION; BAM++) 
   {
-    bitWrite(green[BAM][WhichByte], 7 - WhichBit, bitRead(G, BAM));
+    bitWrite(green[BAM][WhichByte], WhichBit, bitRead(G, BAM));
     
     bitWrite(red[BAM][WhichByte], WhichBit, bitRead(R, BAM));
 
